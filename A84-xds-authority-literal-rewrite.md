@@ -57,7 +57,8 @@ Feature guarded by `GRPC_XDS_EXPERIMENTAL_AUTHORIY_LITERAL_REWRITE`, disabled by
 
 Alternative approaches considered.
 - Exclusively use the existing `auto_host_rewrite` feature. This would require a CDS cluster per
-  upstream target, which mean that connections would not be re-used between gRPC xDS client and
+upstream target, which means that there would be one connection per service behind the proxy
+between each gRPC clients and the proxy.
   the proxy.
 - Using the HTTP CONNECT protocol has the same drawback in that connections to the proxy that
   target different upstream services won't reuse the same connection.
