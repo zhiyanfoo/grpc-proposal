@@ -46,8 +46,10 @@ header.
 
 ## Proposal
 
-Implement `host_rewrite_literal` feature in gRPC xDS client, enabling explicit authority header
-rewrites. This will be conditioned on `trusted_xds_server` as described in [gRFC A81][A81].
+Implement
+[`host_rewrite_literal`](https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route_components.proto)
+feature in gRPC xDS client, enabling explicit authority header rewrites. This will be
+conditioned on `trusted_xds_server` as described in [gRFC A81][A81].
 
 ### Temporary environment variable protection
 
