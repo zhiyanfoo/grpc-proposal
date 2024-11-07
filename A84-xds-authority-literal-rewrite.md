@@ -14,7 +14,7 @@ authority header rewriting when `trusted_xds_server` is set.
 
 ## Background
 
-gRPC xDS currently supports `auto_host_rewrite` as per gRFC A81 but lacks `host_rewrite_literal`
+gRPC xDS currently supports `auto_host_rewrite` as per [gRFC A81][A81] but lacks `host_rewrite_literal`
 support, useful when a single cluster targets a reverse proxy routing based on the authority
 header.
 ```
