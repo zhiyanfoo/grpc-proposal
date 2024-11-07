@@ -42,7 +42,7 @@ header.
 
 [A29]: A29-xds-tls-security.md
 [A81]: A81-xds-authority-rewriting.md
-[A86]: A86-xds-http-connect.md
+[A86]: https://github.com/grpc/proposal/pull/455
 
 ## Proposal
 
