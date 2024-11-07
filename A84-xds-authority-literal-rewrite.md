@@ -73,5 +73,4 @@ migrating to or using both systems concurrently.
 
 ## Implementation
 
-We can contribute an implementation of this to golang. From our initial drafts, the changes
-required to support this are minimal.
+We will contribute an implementation to Go.
