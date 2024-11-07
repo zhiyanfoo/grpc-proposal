@@ -43,11 +43,12 @@ header.
 [A29]: A29-xds-tls-security.md
 [A81]: A81-xds-authority-rewriting.md
 [A86]: https://github.com/grpc/proposal/pull/455
+[route_action]: https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route_components.proto
 
 ## Proposal
 
 Implement
-[`host_rewrite_literal`](https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route_components.proto)
+[`host_rewrite_literal`][route_action]
 feature in gRPC xDS client, enabling explicit authority header rewrites. This will be
 conditioned on `trusted_xds_server` as described in [gRFC A81][A81].
 
@@ -58,7 +59,7 @@ Feature guarded by `GRPC_XDS_EXPERIMENTAL_AUTHORIY_LITERAL_REWRITE`, disabled by
 ## Rationale
 
 Alternative approaches considered.
-- Exclusively use the existing `auto_host_rewrite` feature. This would require a CDS cluster per
+- Exclusively use the existing [`auto_host_rewrite`][route_action] feature. This would require a CDS cluster per
   upstream target, which means that there would be one connection per service behind the proxy
   between each gRPC clients and the proxy.
 - Using the HTTP CONNECT protocol has the same drawback in that connections to the proxy that
