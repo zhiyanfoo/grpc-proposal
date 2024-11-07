@@ -47,7 +47,7 @@ header.
 ## Proposal
 
 Implement `host_rewrite_literal` feature in gRPC xDS client, enabling explicit authority header
-rewrites. This should be conditioned on `trusted_xds_server`.
+rewrites. This will be conditioned on `trusted_xds_server` as described in [gRFC A81][A81].
 
 ### Temporary environment variable protection
 
