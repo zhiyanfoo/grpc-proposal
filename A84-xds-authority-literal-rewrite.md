@@ -57,15 +57,14 @@ Feature guarded by `GRPC_XDS_EXPERIMENTAL_AUTHORIY_LITERAL_REWRITE`, disabled by
 
 Alternative approaches considered.
 - Exclusively use the existing `auto_host_rewrite` feature. This would require a CDS cluster per
-upstream target, which means that there would be one connection per service behind the proxy
-between each gRPC clients and the proxy.
-  the proxy.
+  upstream target, which means that there would be one connection per service behind the proxy
+  between each gRPC clients and the proxy.
 - Using the HTTP CONNECT protocol has the same drawback in that connections to the proxy that
   target different upstream services won't reuse the same connection.
-   - in the case where instead of a single proxy in between the target upstream service there
-     are two proxies (e.g. client -> egress proxy -> ingress proxy), this would not only prevent
-     connection reuse between the initial client to the proxy, but also between the intermediary
-     proxies (e.g. between the egress and ingress proxy).
+   - in the case where instead of a single proxy in between the client and target upstream
+     service there are two proxies (e.g. client -> egress proxy -> ingress proxy -> svc), this
+     would not only prevent connection reuse between the initial client to the proxy, but also
+     between the intermediary proxies (e.g. between the egress and ingress proxy).
 
 Even if connection pooling was not a major concern, this addition will bring gRPC xDS client
 functionality closer to parity with Envoy's capabilities, simplifying configurations for users
