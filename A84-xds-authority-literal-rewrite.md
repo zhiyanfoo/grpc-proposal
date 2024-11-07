@@ -40,10 +40,6 @@ header.
 * [gRFC A81: xDS Authority Rewriting][A81]
 * [gRFC A86: xDS-Based HTTP CONNECT][A86]
 
-[A29]: A29-xds-tls-security.md
-[A81]: A81-xds-authority-rewriting.md
-[A86]: https://github.com/grpc/proposal/pull/455
-[route_action]: https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route_components.proto
 
 ## Proposal
 
@@ -77,3 +73,8 @@ migrating to or using both systems concurrently.
 ## Implementation
 
 We will contribute an implementation to Go.
+
+[A29]: A29-xds-tls-security.md
+[A81]: A81-xds-authority-rewriting.md
+[A86]: https://github.com/grpc/proposal/pull/455
+[route_action]: https://www.envoyproxy.io/docs/envoy/latest/api-v3/config/route/v3/route_components.proto
