@@ -36,8 +36,13 @@ header.
 ```
 
 ### Related Proposals:
-* [A81: `auto_host_rewrite` in gRPC xDS](https://github.com/grpc/proposal/blob/master/A81-xds-routes.md)
-* [A86: xDS-Based HTTP CONNECT](https://github.com/grpc/proposal/pull/455)
+* [gRFC A29: xDS-Based Security for gRPC Clients and Servers][A29]
+* [gRFC A81: xDS Authority Rewriting][A81]
+* [gRFC A86: xDS-Based HTTP CONNECT][A86]
+
+[A29]: A29-xds-tls-security.md
+[A81]: A81-xds-authority-rewriting.md
+[A86]: A86-xds-http-connect.md
 
 ## Proposal
 
